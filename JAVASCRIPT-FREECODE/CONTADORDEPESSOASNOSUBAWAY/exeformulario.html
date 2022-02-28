@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulário</title>
+</head>
+<style>
+
+    *{
+        font-family: sans-serif;
+    }
+    body{
+        background-color: lightseagreen;
+    }
+
+    legend{
+        text-align: center;
+    }
+
+    fieldset{
+        text-align: center;
+        margin: auto;
+        padding: 10vh;
+        width: 100vh;
+        height: auto;
+        background-color: white;
+        border-radius: 5px;
+    }
+
+
+
+
+</style>
+
+<body>
+    
+<legend>Formulário</legend>
+<fieldset>
+    <h2>Digite seus dados a baixo</h2>
+    <p >Nome:</p>
+    <input   type="text" name="nome" id="nome" placeholder="Nome">
+    <p>sobrenome:</p>
+    <input type="text" name="sobrenome" id="sobrenome" placeholder="Sobrenome">
+
+    <br><button onclick="resul()" >Resultado</button>
+
+    <div id="ver">
+
+    </div>
+
+
+</fieldset>
+
+<script>
+    /* ALGO A SER LEMBRADO ! ! !
+    ESTAVA TENDO PROBLEMAS AO EXECUTAR O Nome E Sobrenome
+    ESTAVA DANDO ERRO [object HTMLInputElement]" LOGO 
+    APÓS COLOQUEI O VALUE E FUNCIONOU O PROGRAMA. 
+
+      */
+
+    function resul(){
+        let nome = window.document.getElementById('nome')
+        let sobrenome = window.document.getElementById('sobrenome')
+        let ver = window.document.getElementById('ver')
+
+        ver.innerHTML = `Prazer ${nome.value}  ${sobrenome.value}! Seja bem vindo`
+
+    }
+</script>
+
+
+</body>
+</html>

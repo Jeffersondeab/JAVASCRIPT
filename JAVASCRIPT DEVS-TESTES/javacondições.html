@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições treino</title>
+</head>
+<body>
+
+    <h1> Saber se já adulto ou não</h1>
+    <input type="number" name="botão" id="botao"  min="0">  
+    <input type="button" value="resuldado" onclick="resul()">
+    <div id="res"></div>
+
+    <script>
+        
+        function resul(){
+            var botao = window.document.getElementById('botao')
+            var res = window.document.getElementById('res')
+            var idade = Number(botao.value)
+
+            if (idade > 120 || idade <= 0){
+                window.alert ('ERRO FAVOR REPETIR')
+            }else if (idade < 18) {
+                res.innerText = `Sua idade é ${idade}, você é menor de idade`
+                
+            }else if (idade < 60){
+                res.innerHTML = `Sua idade é ${idade}, você é um adulto`
+            }else if (idade >= 60){
+                res.innerHTML = `Você é um idoso. Sua idade é ${idade}`
+            }
+            
+        }
+ 
+        
+
+
+    </script>
+
+
+
+</body>
+</html>

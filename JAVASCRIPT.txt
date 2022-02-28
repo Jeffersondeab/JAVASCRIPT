@@ -1,0 +1,198 @@
+DICA: EM valor = valor - num.valor NO INDEX3.HTML DO CAIXA ELETRÔNICO ESTAVA DANDO NaN, EU TIREI A PALAVRA VALOR valor = valor - num E FUNCIONOU.
+
+
+PARA LIMPAR A TELA NO NODE JS e VC CODE É CRTL + L
+
+
+para concatenar usando ${} é só colocar o simbolo `` 
+clicando no botão ao lado de P com shift. NÃO É ASPAS
+
+
+Para criar uma tag javascrip é só dígitar dentro do body script qur vai aparecer. Selecione a primeira opção.
+
+
+
+window.alert(' Essa é a minha primeira mensamge')
+
+windon.alert é aquela mensagem que aparece na tela e pede para dar um ok.
+
+
+window.confirm(' Está gostando de JavaScript?')
+
+window.confirm é uma mensagem de confirmação onde você pode escolher em ok ou cancelar
+
+window.prompt ('Qual é o seu nome?')
+
+window.prompt vai aparecer uma caixa perguntando nesse exemplo qual é meu nome é abrindo a tela inicial 
+
+
+
+VARIAVÉL = na hora de criar uma variável com números não precisa de aspas, com letras sim
+
+ 
+PARA COMENDAR EM JAVASCRIPT = //
+
+ 
+
+var nome = window.prompt('qual é o seu nome')
+window.alert(É um grande prazer em te conhecer, ' + nome)
+
+mensagem com a caixa para colocar o nome. Caso queira colocar algo a frente do nome é preciso concatenar da seguinte forma.
+
+, ' + nome + '!'
+
+foi posto um ponto de esclamação a frente do nome
+
+
+PARA CONVERTER NÚMERO PARA STRING É SÓ COLOCAR 
++ STRING(S))
+
+
+
+
+NO TERMINAL = var n1 = 1545.5
+
+n1.toFixed(2) que ira ajustar o valor para 1545.50
+
+COM A FUNÇÃO A BAIXO ELE VAI TRANSFORMA O NÚMERO EM CONTAGEM EM REAL MOEDA BRASILEIRA. PARA MUDAR A MOEDA É SÓ TROCAR O SIMBOLO NO FINAL BRL PARA A MOEDA DESEJADA.
+n1.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'})
+
+n1.toLocaleString('pt-BR',{style: 'currency', currency: 'USD'})
+
+n1.toLocaleString('pt-BR',{style: 'currency', currency: 'EUR'})
+
+
+5 + 2 = 7
+5 - 2 = 3
+5 * 2 = 10
+5 / 2 = 2.5
+5 % 2 = 1
+5 ** 2 = 25
+
+
+
+EM JAVASCRIPT O SIMBOLO / É PARA DIVISÃO REAL, QUE LEVA COM A VIRGULA. EXEMPLO 5/2 = 2.5
+
+JÁ O SIMBOLO % É O RESTO DA DIVISÃO INTEIRA. EXEMPLO 
+5 DIVIDIDO POR 2 É 2 SOBRA 1, O RESTO DA DIVISÃO SERIA O 1 E A SOLUÇÃO ACABA AI. O 1 SERIA O RESTO
+
+** SIGNIFICA A POTÊNCIA OU SEJA 5 AO QUADRADO
+
+
+
+ORDEM DE PRECEDÊNCIA
+
+()
+**
+* / %
++ -
+  
+ELE VAI SEGUIR ESSA ORDEM PARA PARA REALIZAR AS OPERAÇÕES
+
+
+
+ 
+Lógicos: 
+
+! = negação o
+&& = conjunção
+|| disjunção
+
+
+ou seja && seria vamos supor 'a idade está entre 18 e 30 anos.
+o && seria o E OU ENTRE. O || seria você mora no rj ou sp.  
+
+A ORDEM DE PROCEDENCIA É SEMPRE NÃO DEPOIS E, E DEPOIS OU.
+
+
+
+ORDEM DE PRECEDÊNCIA
+
+() ** / 
+> < >= 
+!
+&&
+||
+
+ 
+
+OPERADOR TERNÁRIO:
+
+? E : 
+
+EXEMPLO 
+var media = 5.5
+media > 7? 'APROVADO' : 'REPROVADO'
+
+
+O QUE ELE QUER DIZER.. SE A MÉDIA FOR MAIOR QUE 7 ESTÁ APROVADO, SE NÃO REPROVADO. NESSE CASO ELE SERÁ REPROVADO, POS A MEDIA É 5.5
+
+
+OUTRO EXEMPLO 
+VAR IDADE = 19
+VAR R IDADE >= 18 ? 'MAIOR : 'MENOR'
+
+SE POR R VAI TER A RESPOSTA QUE É MAIOR. O QUE QUER DIZER, SE A IDADE FOR MAIOR OU IGUAL A 18 ELE VAI SER MAIOR TRUE, SE NÃO FOR MAIOR OU SEJA : VAI SER FALSE MENOR.
+
+
+ 
+OUTRO EXEMPLO:
+VAR X = 8
+VAR RES X % 2 == 0 ?5 :9
+
+
+O QUE ELE QUER SABER ACIMA. 8 DIVIDIDO 2 É IGUAL A 4, RESTA 0. O SINAL DE % SIGNIFICA QUE ELE QUER SOMENTE O QUE RESTOU, ENTÃO O QUE RESTOU DE 8 DIVIDIDO POR 2 FOI ZERO. AGORA 0 == 0 IGUAL A TRUE, ENTÃO A RESPOSTA DO RES VAI SER 5 POS DEU VERDADEIRO 0 == 0.
+
+SEJA SE FOSSE 9 DIVIDIDO POR 2 SOBRARIA 1 E DERIA FALSE
+
+
+DOM:
+ 
+é criado um caminho para acesso das tags da seguinte forma.
+
+var p1 = window.document.getElementsByTagName('')
+p1 .style.backgroundcolor = 'green'
+
+
+O P1 ELE PEGA A INFORMAÇÃO. SUPONHA QUE A TAG 'P' FOI COLOCADA NA ('') ACIMA, ELE VAI RECEBER A INFORMAÇÃO QUE AS PROXIMAS INFORMAÇÕES QUE SERAM GERADAS VÃO SER NA TAG P. PARA QUE A INFORMAÇÃO SEJA PARA UMA TAG ESPECIFICA, É PRECISO COLOCAR [] E COLOCAR O NÚMERO DA POSIÇÃO DESSA TAG, ID OU CLASS, QUE SE INICIA PELO NÚMERO 0. EXEMPLO [0].
+
+PARA QUE O GETELEMENTSBY FUNCIONE É PRECISO COLOCA CORRETAMENTE, SE FOR ID, COLOCAR GETELEMENTSBYID, SE FOR CLASS, COLOCAR GETELEMENTSBYCLASSNAME, SE FOR POR TAG COLOCAR, getElementsByTagName.
+
+
+
+
+PARA TENTAR ACHAR O ERRO NO JAVASCRIPT, VAI NO DEVTOOLS, NO CANTO SUPERIOR DIREITO VAI TER UM X VERMELHO, É SÓ CLICAR EM CONSOLE, O PRIMEIRO ERRO É O ERRO RECENTE. CONSTA O QUE PODE ESTAR ERRADO E NO CANTO TEM AULA9.HTML E O NÚMERO DA LINHA ONDE PODE SER O ERRO
+
+
+PARA ROTAR OS PROGRAMAS NO VSCODE COM O JAVASCRIPT PRESSIONE F8
+
+
+O SWITCH É COMO SE FOSSE O IF SÓ QUE SÓ FUNCIONA COM NÚMEROS INTEIROS. NÃO ESQUECER DO BREAK!!
+
+
+
+res.style.texAligh = 'center' é para centralizar o texto com javascript
+
+
+COMO FAZER UM ID NO JAVASCRIPT : 
+var img = document.createElement('img')
+img.setAttribute('id', 'foto')
+SERIA A MESMA COISA QUE CRIAR UMA TAG IMG COM O ID FOTO
+
+
+
+
+É seguido a seuinte forma para dizer 
+menor ou igual
+
+}else if (idade  <= 18)
+if (idade >=0 && idade < 13 )
+
+
+
+
+
+
+
+
+ 

@@ -1,0 +1,26 @@
+body{
+    background-color: beige;
+}
+
+#cal{
+   margin: 10vh;
+   text-align: center;
+}
+
+button{
+    padding: 5px;
+    width: 70px;
+    margin: 3vh;
+    margin-top: 5vh;
+}
+
+#num1-el, #num2-el{
+    margin: 5px;
+    border-bottom: solid 2px black;
+    
+}
+
+#sum-el{
+    border-bottom: solid 2px black;
+}
+
