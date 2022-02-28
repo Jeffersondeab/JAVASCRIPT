@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste array e loop </title>
+</head>
+<body>
+
+    <div id="greetings-El"></div>
+
+    <script>
+        let sentence = ['hello', 'my', 'name', 'is', 'jeff']
+        let greentings = window.document.getElementById('greetings-El')
+
+/* O += SERVE PARA QUE TODOS OS RESULTADOS DO ARRAY APAREÇAM.
+SE FOR COLOCADO SOMENTE O SINAL DE = ELE VAI APARECER
+SOMENTE O ÚLTIMO RESULTADO. 
+O + ' ' SERVE PARA SEPARA AS PALAVRAS   */
+        for(let i = 0; i < sentence.length; i++){
+            greentings.textContent += sentence[i] + ' '
+        }
+    </script>
+    
+</body>
+</html>

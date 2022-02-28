@@ -2,7 +2,7 @@
 
 let firstCard = 10
 let secondCard = 5
-
+let cards = [firstCard, secondCard]
 let sum = firstCard + secondCard
 
 /* ele colocou essa variável hasblackjack junto
@@ -36,12 +36,15 @@ let carosel = window.document.getElementById('carosel-el')
  NO DECORRER DO DESENVOLVIMENTO, PARA NÃO PRECISAR MUDAR O 
  NOME NO ONCLICK, MAS SE QUISSESE SÓ TROCAR NO ONCLICK
  PODERIA SER FEITO TBM */
-function startGame(){
+function StartGame(){
     renderGame()
 }
 
 function renderGame() {
-    carosel.textContent = 'Card:' + firstCard + ' e ' + secondCard
+    for(let i = 0; i < cards; i++){
+        carosel.textContent += cards[i]
+    }
+    carosel.textContent = 'Card:' + cards[0] + ' ' + cards[1]
     sumEl.textContent = 'Sum:' + sum
     if (sum < 21) {
         messagem = 'Do you want to a new card? 🤔'
@@ -59,8 +62,9 @@ function renderGame() {
 adicionar mais números  */
 
 function newc(){
-    let card = 7
+    let card = 2
     sum = sum + card 
+    cards.push(card)
     renderGame()
 }
 
