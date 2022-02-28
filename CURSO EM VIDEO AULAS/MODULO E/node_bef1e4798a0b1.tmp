@@ -1,0 +1,4 @@
+let din = 500
+for (let f1 = 10; f1 <= din; f1 -= din){
+    console.log(din)
+}

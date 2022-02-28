@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem</title>
+</head>
+
+<style>
+
+    :root{
+      --font:  sans-serif;
+    }
+
+    body{
+        background-color: lightseagreen;
+    }
+
+    header{
+        text-align: center;
+        font-family:var(--font);
+    }
+
+    section{
+        background-color: white;
+        width: 50vh;
+        height: 50vh;
+        margin: auto;
+        padding: 3vh;
+        border-radius: 5px;
+        font-family: var(--font);
+    }
+
+ 
+ 
+    footer{
+        text-align: center;
+        font-family: var(--font);
+    }
+</style>
+
+<body>
+    
+
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+
+    <section>
+        <p>
+            Inicio:
+            <input type="number" name="txtcx" id="txtcx" min="0">
+        </p>
+
+        <p>
+            Fim:
+            <input type="number" name="txtcx2" id="txtcx2" min="0">
+        </p>
+
+        <p>
+            Passo:
+            <input type="number" name="txtcx3" id="txtcx3" min="0">
+        </p>
+
+        <input type="button" value="Resultado" onclick="resultado()" >
+
+        <div id="res">
+            <p>Preparando a contagem..</p> 
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Feito por Jefferson Barcellos</p>
+    </footer>
+
+
+    <script>
+
+        function resultado(){
+            var res = window.document.getElementById('res')
+            var inicio = window.document.getElementById('txtcx')
+            var fim = window.document.getElementById('txtcx2')
+            var passo = window.document.getElementById('txtcx03')
+            if (inicio == 0 || fim == 0 || passo == 0){
+                window.alert('FAVOR DIGITAR CORRETAMENTE')
+            }else{
+                res.innerHTML = 'contando: '
+                var a = Number(inicio.value)
+                var b = Number(fim.value)
+                var c = Number(passo.value)
+                for(var d = a; d <= b ; d += c){
+                    res.innerHTML += `${d}`
+                }  
+           }
+        }
+    </script>
+
+</body>
+</html>

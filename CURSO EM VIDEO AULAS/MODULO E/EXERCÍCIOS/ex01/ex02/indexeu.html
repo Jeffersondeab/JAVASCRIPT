@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+
+<style>
+    
+   *{
+       font-family: sans-serif;
+   }
+
+
+    body{
+        background-color: lightseagreen;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    section{
+        margin: auto;
+        background-color: white;
+        width: 70vh;
+        height: 50vh;
+        padding: 10px;
+        border-radius: 5px;
+
+    }
+
+    footer{
+        text-align: center;
+    }
+</style>
+
+<body>
+    
+
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+
+
+<section>
+    <p>
+        Número:
+        <input type="number" name="txtn" id="txtn">
+         <input type="button" value="Ver" onclick="resultado()">
+    </p>
+
+    <div>
+        <!-- SIZE É PARA AUMENTAR O SELECT' -->
+        <select name="tabuada" id="seltab" size="10">
+
+            <option>Dígite um número acima</option>
+
+        </select>
+        
+    </div>
+</section>
+
+<footer>
+    &copy; feito por Jefferson
+</footer>
+
+<script> 
+
+function resultado(){
+    var num = window.document.getElementById('txtn')
+    var tab = window.document.getElementById('seltab')
+ 
+    if (num.value.length == 0 ){
+       window.alert('ERRO ')  
+    }else{
+        var n = Number(num.value)
+        c = 1
+        tab.innerHTML = ''
+        while ( c <= 10 ){
+        var item = document.createElement('option')
+        item.text = `${n} x ${c} = ${n*c}`
+        tab.appendChild(item)
+        c++  
+        }
+        
+    }
+}
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

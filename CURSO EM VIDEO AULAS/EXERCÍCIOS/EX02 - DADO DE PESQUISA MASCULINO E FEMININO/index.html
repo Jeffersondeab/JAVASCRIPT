@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de idade</title>
+</head>
+<style>
+
+
+    header{
+        text-align: center;
+        font-family: sans-serif;
+    }
+
+    section{
+        font-family: sans-serif;
+        margin: auto;
+        width: 400px;
+        height: 400px;
+        background-color: burlywood;
+        padding: 20px;
+
+    }
+
+    #foto{
+        width: 220;
+        height: 220px;
+        margin: auto;
+        }
+
+    footer{
+        text-align: center;
+    }
+</style>
+
+<body>
+    <header>
+        <h1>Verificador de idade </h1>
+    </header>
+
+    <section>
+        <div>
+            <p>ano de Nascimento</p>
+            <!-- O MIN NO INPUT É PARA IR ATÉ O ZERO E NÃO IR PARA -0,-1 ETC. -->
+
+            <input type="number" name="txtano" id="txtano" min="0">
+
+            <p>Sexo:
+                <!-- NO INPUT RADIO, EM NAME É PRECISO QUE OS DOIS 
+                SEJAM O MESMO PARA QUE NÃO DE ERRO. PARA QUE 
+                NA MARCAÇÃO DAS BOLINHAS SEJA SOMENTE UMA, E NÃO DOIS-->
+                <input type="radio" name="radsex" id="mas" checked>
+                <label for="mas">Masculino</label>
+                <input type="radio" name="radsex" id="fem">
+                <label for="fem">Feminino</label>
+                
+            </p>
+            <p>
+                <input type="button" value="Verificar" onclick="verificar()">
+            </p>
+        </div>
+        <div id="res">
+            Preencha os dados acima para ver o resultado!
+        </div>
+    </section>
+ 
+<img src="imagem/imgmulher/criança.png" alt="">
+     
+    <footer>
+        <p>&copy; Jeff</p>
+    </footer>
+    <script src="script.js" ></script>
+</body>
+</html>

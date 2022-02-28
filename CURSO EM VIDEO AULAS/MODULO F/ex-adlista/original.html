@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicinando números na tabela</title>
+</head>
+
+<style>
+    *{
+        font-family: sans-serif;
+    }
+
+    body{
+        background-color: lightseagreen;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    section{
+        background-color: white;
+        width: 80vh;
+        height: auto;
+        border-radius: 5px;
+        margin: auto;
+        padding: 15px;
+
+    }
+
+    footer{
+        text-align: center;
+    }
+</style>
+
+<body>
+    
+    <header>
+        <h1>Lista para adicinar números</h1>
+    </header>
+
+    <main>
+        <section>
+            <p>
+                Dígite um número 1 á 100 :
+                <input type="number" name="fnum" id="fnum" min="0">
+                <input type="button" value="Adicionar" onclick="adicionar()" >
+            </p>
+
+        <div>
+            <select name="lista" id="flista" size="10" style="width:30vh;">
+            
+            </select>
+
+            <br><input type="button" value="Finalizar" onclick="finalizar()"> 
+        </div>
+
+        <div id="res"></div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+        <p>
+            &copy; Jefferson
+        </p>
+    </footer> 
+
+    <script>
+        let num = document.querySelector('input#fnum')
+        let lista = document.querySelector('select#flista')
+        let res = document.querySelector('div#res')
+        /* É ATRÁVES O VALORES = [] QUE É UM VETOR, QUE 
+        ELE FOI USADO PARA CALCULAR OS DADOS */
+        let valores = []
+
+        /* ISNUMERO ELE FOI CRIADO, ASSIM COMO ILISTA */
+        function isNumero (n){
+            if (Number (n) >= 1 && Number(n) <= 100){
+                return true
+            }else{
+                return false
+            }
+        }
+
+        /*-1 significa que o valor não foi encontrado na lista*/
+        function inLista (n, l){
+            if (l.indexOf(Number(n)) != -1){
+                return true
+            }else{
+                return false
+            }
+        }
+
+
+        /* A ESCLAMAÇÃO SIGNIFICA NÃO. NESSE CASO QUER DIZER
+        QUE NÃO ESTA NA LISTA. 
+        SE TIVER O NÚMERO NA LISTA ELE VAI PRO ELSE, SE NÃO TIVER 
+        NA LISTA AINDA ELE FICA NO IF */
+        function adicionar(){
+        if (isNumero(num.value) && !inLista(num.value, valores)){
+            /* EM VALORES.PUSH(NUMBER(NUM.VALUE)) ELE QUER DIZER QUE,
+            ELE VAI ADICIONAR NO VETOR VALORES.PUSH, QUE ESTA DENTRO DE NUMBER(NUM.VALUE)*/
+            valores.push(Number(num.value))
+            let item = document.createElement('option')
+            item.text = `Valor ${num.value} adicionado`
+            lista.appendChild(item)
+            /* ESSE RES.INNERHTML ELE SERVE AQUI PARA A SEGUINTE FUNÇÃO.
+            QUANDO EU FOR ADICIONAR NOVOS VALORES O TEXTO ABAIXO DE FINALIZAR
+            VAI DESAPARECER PARA QUE QUANDO EU CLICAR NOVAMENTE APAREÇA
+            UM NOVO RESULTADO. ASSIM QUE EU DIGITAR E O NÚMERO E CLICAR 
+            ADICIONAR ELE VAI DESEPARECER */
+            res.innerHTML = ''
+        }else{
+            window.alert('Valor inválido ou já encontrado na lista')
+        }
+        /* EM NUM.VALUE = '' ELE VAI APAGAR OU DEIXAR M BRANCO
+        O CAMPO PARA COLOCAR OS NÚMEROS. E O NUM.FOCUS ELE VAI JÁ
+        FICAR PREPARADO PARA SER DIGITADO OUTRO NÚMERO */
+        num.value = ''
+        num.focus()
+    }
+
+    function finalizar(){
+        if (valores.length == 0){
+            window.alert('Adicionar valores antes de finalizar!')
+        }else{
+            /* LET TOT = VALORES.LENGTH VAI VER QUANTOS VALORES FORAM 
+            ADICIONADO */
+            let tot = valores.length
+
+            let maior = valores[0]
+            let menor = valores[0]
+            let soma = 0 
+            let media = 0
+            for(let pos in valores){
+                soma += valores[pos]
+                if (valores[pos] > maior)
+                    maior = valores[pos]
+                if(valores[pos] < menor)
+                    menor = valores[pos]
+            }
+            media = soma / tot
+            res.innerHTML = ''
+            res.innerHTML += `<p> Ao todo, temos ${tot} números cadastrados. </p>`
+            res.innerHTML += `<p> O maior valor informado foi ${maior}</p>`
+            res.innerHTML += `<p> O menor valor informado foi ${menor}</p>`
+            res.innerHTML += `<p>Somando todos os valores , temos ${soma}.</p>`
+            res.innerHTML += `A média dos valore digitados é ${media}</p>`
+        }
+         
+    }
+
+    </script>
+
+</body>
+</html>

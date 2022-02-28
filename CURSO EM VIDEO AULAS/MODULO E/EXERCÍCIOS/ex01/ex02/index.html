@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+
+<style>
+    
+   *{
+       font-family: sans-serif;
+   }
+
+
+    body{
+        background-color: lightseagreen;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    section{
+        margin: auto;
+        background-color: white;
+        width: 70vh;
+        height: 50vh;
+        padding: 10px;
+        border-radius: 5px;
+
+    }
+
+    footer{
+        text-align: center;
+    }
+</style>
+
+<body>
+    
+
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+
+
+<section>
+    <p>
+        Número:
+        <input type="number" name="num" id="txtn">
+         <input type="button" value="Ver" onclick="resultado()">
+    </p>
+
+    <div>
+        <!-- SIZE É PARA AUMENTAR O SELECT' -->
+        <select name="tabuada" id="seltab" size="10">
+
+            <option>Dígite um número acima</option>
+
+        </select>
+        
+    </div>
+</section>
+
+<footer>
+    &copy; feito por Jefferson
+</footer>
+
+<script>
+    function resultado(){
+        var num = window.document.getElementById('txtn')
+        var tab = window.document.getElementById('seltab')
+        if (num.value.length == 0){
+            window.alert('Por favor, dígite um número') 
+        }else{
+            var n = Number(num.value)
+            /* VAR C = 1 ELE VAI COMEÇAR PELO 1 */
+            var c = 1
+
+            /* tab.innerHTML = '' É PARA QUE LIMPE ANTES 
+            DE GERAR UMA NOVA TABUADA E NÃO GERE UMA TABUADA
+            EMBAIXO DA OUTRA. */
+            tab.innerHTML = ''
+            /* A TABUADA VAI ATÉ 10 */
+            while (c <= 10){
+
+                /*O VAR ITEM = DOCUMENT.CREATEELEMENT('OPTION') 
+                É COMO SE EU CRIASSE UMA TAG OPTION NO HTML DENTRO DO
+                SELECTION. DESSA FORMA É MAIS VIÁVEL PQ AQUI EU
+                CRIO SOMENTE UM VAR QUE SERVE NESSE CASO PARA 10.
+                LA EU TERIA QUE CRIAR 10 TAGS OPTION */
+                var item = document.createElement('option')
+
+                /* item.text = `${n} x ${c} = ${n*c}` 
+                FOI CRIADO O VAR ITEM, ELE VAI PEGAR O NÚMERO N
+                QUE VAI COMEÇAR NO NÚMERO 1 DE ACORDO COM 
+                O VAR C = 1 QUE VAI SER = N X V, QUE VAI MOSTRAR
+                A SOMA DESSES VALORES.*/
+                item.text = `${n} x ${c} = ${n*c}`
+
+                /* item.value = `tab ${c} É PARA MARCAÇÃO QUANDO
+                SE CLICA NA OPÇÃO NA TABUADA E ELE DESTACA A OPÇÃO.
+                 PARA O JAVASCRIPT NÃO FAZ SENTIDO OU
+                NÃO PRECISA USAR, MAS PARA OUTRAS LINGUAGENS SIM` */
+                item.value = `tab ${c}`
+
+                /* TAB.APPENDCHILD(ITEM) FOI CRIADO O VAR ITEM
+                PARA QUE ELE APAREÇA É PRECISO CRIAR UM ELEMENT FILHO
+                Q É O DE BAIXO */
+                tab.appendChild(item)
+                c++
+            }
+        }    
+    }
+</script>
+
+</body>
+</html>
+
+
+ 

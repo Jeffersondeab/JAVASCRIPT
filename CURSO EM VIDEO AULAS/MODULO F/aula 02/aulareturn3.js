@@ -1,0 +1,10 @@
+let v = function(x){
+    return x*2
+}
+
+console.log(v(5))
+
+/* O QUE EU ENTENDI FOI, VARIÁVEL RECEBE UMA FUNÇÃO X
+QUE RETORNA X VEZES E A QUANTIDADE DESEJÁVEL PARA SE MULTIPLICAR 
+QUE NESSE CASO É O 2. console.log(v(5)) VAI SER O NÚMERO
+MULTIPLICADO */

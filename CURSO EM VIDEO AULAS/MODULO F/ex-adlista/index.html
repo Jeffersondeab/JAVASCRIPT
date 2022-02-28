@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicinando números na tabela</title>
+</head>
+
+<style>
+    *{
+        font-family: sans-serif;
+    }
+
+    body{
+        background-color: lightseagreen;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    section{
+        background-color: white;
+        width: 80vh;
+        height: 50vh;
+        border-radius: 5px;
+        margin: auto;
+        padding: 15px;
+
+    }
+
+    footer{
+        text-align: center;
+    }
+</style>
+
+<body>
+    
+    <header>
+        <h1>Lista para adicinar números</h1>
+    </header>
+
+    <main>
+        <section>
+            <p>
+                Dígite um número 1 á 100 :
+                <input type="number" name="num" id="num" min="0">
+                <input type="button" value="Adicionar" onclick="resul()" >
+            </p>
+
+        <div>
+            <select name="lista" id="lista" size="10" style="width:30vh;">
+
+                
+            </select>
+
+        </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+        <p>
+            &copy; Jefferson
+        </p>
+    </footer> 
+
+    <script>
+        function resul(){
+            var abalist = window.document.getElementById('num')
+            var tab = window.document.getElementById('lista')
+            if (abalist.value <= 0 || abalist.value > 100 ){
+                window.alert('FAVOR DÍGITAR UM NÚMERO ACIMA DE ZERO E ABAIXO DE 100')
+            }else{
+                var cont = Number(abalist.value)
+                var ta = 100
+                while ( cont <= ta){
+                    var item = document.createElement('option')
+                    item.text = (`vc digitou o número ${cont}`)
+                    tab.appendChild(item)
+                    c++
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
