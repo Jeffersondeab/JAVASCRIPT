@@ -1,7 +1,7 @@
 
 
-let firstCard = 10
-let secondCard = 5
+let firstCard = getRandomCard()
+let secondCard = getRandomCard()
 let cards = [firstCard, secondCard]
 let sum = firstCard + secondCard
 
@@ -40,11 +40,18 @@ function StartGame(){
     renderGame()
 }
 
+function getRandomCard(){
+    let num = Math.floor(Math.random()*13) + 1
+    return num
+}
+
+
 function renderGame() {
-    for(let i = 0; i < cards; i++){
-        carosel.textContent += cards[i]
+    carosel.textContent = 'Cards:'
+    for(let i = 0; i < cards.length; i++){
+        carosel.textContent += cards[i] + ' '
     }
-    carosel.textContent = 'Card:' + cards[0] + ' ' + cards[1]
+     
     sumEl.textContent = 'Sum:' + sum
     if (sum < 21) {
         messagem = 'Do you want to a new card? 🤔'
@@ -62,7 +69,7 @@ function renderGame() {
 adicionar mais números  */
 
 function newc(){
-    let card = 2
+    let card = getRandomCard()
     sum = sum + card 
     cards.push(card)
     renderGame()
