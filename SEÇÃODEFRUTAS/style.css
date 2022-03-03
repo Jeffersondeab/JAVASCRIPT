@@ -1,0 +1,23 @@
+#uva-el{
+    background-color: lightgreen;
+    width: 50vh;
+    height: 20vh;
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+ 
+}
+
+#central{
+    display: inline-flex;
+}
+
+#morango-el{
+    background-color: lightsalmon;
+    width: 50vh;
+    height: 20vh;
+    border-radius: 10px;
+    display: flex;
+    margin: 10px;
+    
+}

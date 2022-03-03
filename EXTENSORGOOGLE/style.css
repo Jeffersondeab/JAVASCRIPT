@@ -1,0 +1,27 @@
+#input-el{
+    width: 70vh;
+    height: 5vh;
+    border-radius: 10px;
+    outline: none;
+    border: solid gray 1px;
+    margin-top: 10vh;
+}
+
+#input-btn{
+    padding: 10px;
+    width: 20vh;
+    border-radius: 5px;
+    background-color: lightgreen;
+    cursor: pointer;
+    border: none;
+    margin: 5px;
+    font-weight: bold;
+ 
+
+}
+
+#caixa-pesquisa{
+    display: block;
+    text-align: center;
+
+}
