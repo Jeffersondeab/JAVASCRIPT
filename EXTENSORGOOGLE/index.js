@@ -13,7 +13,7 @@ let myLeadsFromLocalStorage = JSON.parse(localStorage.getItem('myLeads'))
 
 if (myLeadsFromLocalStorage){
     myleads = myLeadsFromLocalStorage
-    renderLeads()
+    render()
 }
 
 
@@ -21,7 +21,7 @@ if (myLeadsFromLocalStorage){
 deleteu.addEventListener('click', function(){
     localStorage.clear()
     myleads = []  
-    renderLeads()
+    render(myleads)
 })
 
 
@@ -35,13 +35,13 @@ inputbtn.addEventListener('click', function() {
     myleads.push(inputEl.value)  
     inputEl.value = ''
     localStorage.setItem('myLeads',JSON.stringify(myleads))
-    renderLeads() 
+    render(myleads) 
 }) 
 
  
 
 
-function renderLeads() {
+function render(leads) {
     let listItems = ""
     for (let i = 0; i < myleads.length; i++) {
         listItems += `
