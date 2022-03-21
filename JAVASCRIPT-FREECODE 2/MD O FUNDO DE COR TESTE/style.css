@@ -1,0 +1,38 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: sans-serif;
+}
+
+#tema{
+    background-image: linear-gradient( rgba(233, 228, 203, 0.63),rgba(114, 95, 95, 0.61));
+    padding: 2vh;
+    text-align: center;
+}
+
+#tnav{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+#tnav > a{
+    color: white;
+    text-decoration: none;
+    margin: 2vh;
+}
+
+
+
+#principal{
+    margin: 20vh;
+}
+
+
+#botao{
+    display: block;
+    margin: auto;
+    padding: 2vh;
+ 
+
+}
